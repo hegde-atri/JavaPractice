@@ -1,4 +1,4 @@
-package SectionB;
+package AQAPaper1SectionB;
 /*      Write a program that checks which numbers from a series of numbers entered
         by the user are prime numbers.
 
@@ -45,9 +45,7 @@ public class June2018 {
 
 
             System.out.print("Do want to try again (y/n): ");
-            if(scanner.next() == "n"){
-                break;
-            }
+            if(scanner.next().equals("n")) break;
 
         }
 

@@ -1,6 +1,5 @@
-package SectionB;
+package AQAPaper1SectionB;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
