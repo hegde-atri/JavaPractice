@@ -9,27 +9,38 @@ again. unmix("123456") ➞ "214365"
  */
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Question3 {
-    // TODO
 
     public static void main(){
         Scanner scanner = new Scanner(System.in);
         while(true){
-            System.out.println("Enter input:");
+            System.out.print("Enter input:");
             String input = scanner.nextLine();
+            char[] inputArr = input.toCharArray();
+
+            for(int i = 0; i<inputArr.length; i+=2){
+                if(!(i + 2 > inputArr.length)){
+                    char temp = inputArr[i];
+                    inputArr[i] = inputArr[i+1];
+                    inputArr[i+1] = temp;
+                }else{
+                    break;
+                }
+            }
+            System.out.println(inputArr);
+
+
 
 
             System.out.print("do you want to quit (y/n): ");
-            if(scanner.next().equals("y")) break;
+            if(scanner.nextLine().equals("y")) break;
 
 
 
         }
     }
 
-    public static String mixString(String str){
-        return "";
-    }
 }

@@ -1,5 +1,6 @@
 package AQAPaper1SectionB;
-/*      Write a program that checks which numbers from a series of numbers entered
+/*
+        Write a program that checks which numbers from a series of numbers entered
         by the user are prime numbers.
 
         The program should get a number from the user and then display the messages:

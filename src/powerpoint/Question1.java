@@ -16,7 +16,7 @@ public class Question1 {
         Scanner scanner = new Scanner(System.in);
         while(true){
             System.out.print("Enter text: ");
-            char[] input = scanner.next().toCharArray();
+            char[] input = scanner.nextLine().toCharArray();
             String output = "";
             for(char i = 'a'; i <= 'z'; i++){
                 if(!hasChar(input, i)) output += i;

@@ -1,30 +1,40 @@
 package edabit;
 
+import java.util.Scanner;
+
 public class HarshedNumber {
     // A number is said to be Harshad if it's exactly divisible by the sum of its digits.
     // Create a function that determines whether a number is a Harshad or not.
     // You are expected to solve this challenge via recursion.
 
-    //TODO
 
     public static void main(){
-        int x = 171;
-        int sum = sumOfDigits(x, 0);
-        System.out.println("");
+        Scanner scanner = new Scanner(System.in);
+        while(true){
+            System.out.print("Type in a number: ");
+            int input = scanner.nextInt();
+            System.out.println("Harshed number: " + isHarshed(input));
+
+            System.out.print("wanna quit (y/n)");
+            if(scanner.next().equals("y")) break;
+        }
+
     }
 
     public static int sumOfDigits(int num, int sum){
-        String temp = String.valueOf(num);
+        String temp = Integer.toString(num);
+        sum += Integer.parseInt(temp.substring(0, 1));
 
-        int first = temp.charAt(0);
+        if(!(temp.substring(1).equals(""))){
+            num = Integer.parseInt(temp.substring(1));
+        }else{
+            return sum;
+        }
+        return sumOfDigits(num, sum);
+    }
 
-        temp.replaceFirst(String.valueOf(first), "");
-
-        int newNum = Integer.parseInt(temp);
-
-        int totalSum = sumOfDigits(newNum, sum+first);
-
-        return totalSum;
+    public static boolean isHarshed(int num){
+        return (num % sumOfDigits(num, 0) == 0);
     }
 
 }
