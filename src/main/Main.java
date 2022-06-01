@@ -3,10 +3,7 @@ package main;
 import AQAPaper1SectionB.June2017;
 import AQAPaper1SectionB.June2019;
 import AQAPaper1SectionB.June2020;
-import edabit.BalancedWords;
-import edabit.HarshedNumber;
-import edabit.HowManyPrimeNum;
-import edabit.ReverseOddLength;
+import edabit.*;
 import learning.hashmapStuff;
 import powerpoint.Question1;
 import powerpoint.Question2;
@@ -20,7 +17,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        HarshedNumber.main();
+        TriangularNumberSequence.main();
 
 
     }
